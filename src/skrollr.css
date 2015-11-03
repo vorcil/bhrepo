@@ -1,0 +1,74 @@
+body {
+    height: 3000px;
+    top: 0;
+    position: relative;
+      font-family: avenir, helvetica, sans-serif;
+  background: skyblue;
+  color: white;
+}
+
+.fixed { 
+   position: fixed !important; 
+   zoom:1; /* This enables hasLayout, which is required for older IE browsers */
+   top: 0px !important;
+}
+
+/******************************************************************/
+#skrollr-body {
+position: relative;
+}
+#slides-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+ 
+/* double the height/width of a viewport */
+#slides {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;	
+    left: 0;
+}
+.slide {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:50%;
+}
+#slide-1 {
+    background: url('http://blackhat.co.nz/src/section.intro.jpg') no-repeat center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+  
+}
+#slide-3 {
+    background: url('http://blackhat.co.nz/src/section.ipad.jpg') no-repeat center center;
+     -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    
+    
+}
+#slide-4 {
+    background: url('http://blackhat.co.nz/src/section.ipadwithUI.jpg') no-repeat center center;
+     -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+#slides {
+    width: 200%;
+    height: 200%;
+}
+#sidebar {
+position: fixed;
+top:10px;
+right: 20px;
+}
+

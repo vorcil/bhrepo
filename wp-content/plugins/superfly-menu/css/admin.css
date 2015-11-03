@@ -1,0 +1,537 @@
+html {
+    background: url(../img/xpattern.png) repeat #f1f1f1;
+}
+
+textarea, input, select {
+    margin: 0;
+}
+
+textarea {
+    resize:vertical;
+}
+#wpbody {
+    overflow: hidden;
+}
+.form-title img {
+    display: none;
+    height: 80px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+div.updated {
+    border-left: 4px solid #7ad03a;
+    padding: 1px 12px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    position: absolute;
+    top: 41px;
+    left: 420px;
+    display: none;
+}
+
+#saved {
+    position: absolute;
+    color: #EF6D08;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#saved.hide {
+    opacity: 0;
+}
+
+#sf-options-wrap {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin:  4em 0px 3em 30px;
+    /*overflow: hidden;*/
+    padding: 0 0 80px 0;
+    position: relative;
+    min-height: 100%;
+    /*display: none;*/
+    opacity: 0;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    -ms-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+}
+
+.sf_bg_image_panel_1 {
+    clear: both;
+}
+
+[id*=nks_bg_preview] {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+[id*=nks_bg_preview] .content {
+    display: block;
+    width: 240px;
+    height: 100px;
+    margin: 50px auto;
+    padding: 60px 30px 30px;
+    text-align: center;
+    background: white;
+    font: 300 20px/26px 'Open Sans', sans-serif;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 4px -1px 8px -2px #333 !important;
+    -moz-box-shadow: 4px -1px 8px -2px #333 !important;
+    -webkit-box-shadow: 4px -1px 8px -2px #333 !important;
+}
+
+#tabs {
+
+    margin: 0;
+    overflow: hidden;
+}
+
+#tabs li {
+    float: left;
+    background-color: transparent;
+    border: 3px solid #EF6D08;
+    /* background: linear-gradient(#454A58, #3c404b); */
+    /* background: linear-gradient(#0191CA, #0074a2); */
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    margin: 0 4px 0 0;
+    /* color: #90B7D1; */
+    color: #EF6D08;
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wp-core-ui .button-primary {
+    background: #EF6D08;
+    border-color: #d26608;
+    -webkit-box-shadow: inset 0 1px 0 rgba(230, 167, 93, 0.49),0 1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 1px 0 rgba(230, 167, 93, 0.49),0 1px 0 rgba(0,0,0,.15);
+    color: #fff;
+    text-decoration: none;
+}
+
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: #FF7F00;
+    border-color: #d67108;
+    -webkit-box-shadow: inset 0 1px 0 rgba(230, 114, 15, 0.49),0 1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 1px 0 rgba(230, 114, 15, 0.49),0 1px 0 rgba(0,0,0,.15);
+    color: #fff;
+}
+
+#tabs li span {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 12px;
+    display: inline-block;
+}
+
+#tabs li span:before {
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    opacity: 0;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    -webkit-transform: scale(1.5) translateX(10px) translateY(-10px) rotate(4deg);
+    -moz-transform: scale(1.5) translateX(10px) translateY(-10px) rotate(4deg);
+    -ms-transform: scale(1.5) translateX(10px) translateY(-10px) rotate(4deg);
+    transform: scale(1.5) translateX(10px) translateY(-10px) rotate(4deg);
+    -webkit-backface-visibility: hidden;
+
+    pointer-events: none;
+}
+
+#tabs li.active span:before {
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -ms-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+    -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+    transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+    /*opacity: 1;*/
+    /*width: 100%;*/
+}
+
+#tabs li:hover {
+    color: #e2f8f1;
+}
+
+#tabs li:hover, #tabs li.active {
+    /*background: #0F486F;*/
+    background: #EF6D08;
+}
+
+#tabs li.active {
+    color: white;
+}
+
+#tabs li.active span{
+    /*-webkit-animation: animation 750ms linear both;*/
+    /*animation: animation 750ms linear both;*/
+}
+
+#tabs li:hover span:after {
+    /*width: 100%;*/
+}
+
+#tabs li:before {
+    position: absolute;
+    width: 100%;
+    /*content: '';*/
+    height: 100%;
+    box-shadow: 7px 8px 18px -2px rgba(0, 0, 0, 0.15);
+    top: 0;
+    left: -100%;
+}
+
+#tabs li:first-child:before {
+    display: none;
+}
+
+input[type=checkbox]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=radio]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus {
+    border-color: #d9a36a;
+    -webkit-box-shadow: 0 0 2px rgba(210, 102, 8, 0.47);
+    box-shadow: 0 0 2px rgba(210, 102, 8, 0.47);
+}
+
+.postbox h3 {
+    display: none;
+
+}
+
+.postbox {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 115px;
+    width: 100%;
+    border: none;
+    /*display: none;*/
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -ms-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+
+}
+
+
+
+.postbox.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+
+
+.la {
+    height: 74px;
+    width: 74px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -37px;
+    background: url(../img/LA3.png) -15px -22px no-repeat transparent;
+    display: block;
+    transition: none;
+}
+
+.la:hover {
+    background-position: -105px -22px;
+}
+
+/****/
+
+#sf_bg_preview {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+}
+
+#sf_bg_preview .content {
+    display: block;
+    width: 240px;
+    height: 100px;
+    margin: 50px auto;
+    padding: 60px 30px 30px;
+    text-align: center;
+    background: white;
+    font: 300 20px/26px 'Open Sans', sans-serif;
+    border-radius: 6px;
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+    box-shadow: 4px -1px 8px -2px #333 !important;
+    -moz-box-shadow: 4px -1px 8px -2px #333 !important;
+    -webkit-box-shadow: 4px -1px 8px -2px #333 !important;
+}
+
+#sf-options-wrap .postbox .hndle {
+cursor: default;
+    padding: 7px 11px;
+    margin-bottom: 0;
+}
+
+#sf-options-wrap #icon-tools {
+    position: relative;
+    top: -10px;
+}
+
+.settings-form-wrapper input[type=text],
+.settings-form-wrapper textarea {
+    padding: .7em;
+    max-width: 100%;
+    margin: 0;
+    font: 300 14px 'Open Sans', sans-serif;
+
+}
+#sf-options-wrap .settings-form-wrapper label {
+    margin-bottom: 0.5em;
+    
+}
+
+#sf-options-wrap .settings-form-wrapper {
+    padding: 0.5em 2em 2em;
+}
+.settings-form-wrapper .field-title{
+    display: block;
+    font-weight: bold;
+    padding: 1em 0 0.5em;
+}
+
+#sf-options-wrap .settings-form-wrapper input[type=radio]{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+h2.form-title {
+    padding-bottom: 0.5em;
+    font-size: 32px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hidden-row {
+    display: none;
+}
+
+#sf-options-wrap .settings-form-wrapper .button-primary {
+    margin-top: 1em;
+}
+
+
+.sf_userpic {
+    margin: 0 0 10px;
+}
+
+.settings-form-wrapper.sf_profile input[type=text],
+.settings-form-wrapper.sf_profile textarea{
+    width: 50%;
+}
+
+.sf_custom_bg img {
+    height: 100px;
+}
+
+.settings-form-row.sf_custom_bg {
+    display: none;
+}
+
+label[for=sf_sidebar_pos_left] {
+    width: 65px;height: 45px;
+    display: inline-block;
+    background: url(../img/sidebar-layout.png) 0 0 no-repeat transparent;
+}
+
+label[for=sf_sidebar_pos_right] {
+    width: 65px;height: 45px;
+    display: inline-block;
+    background: url(../img/sidebar-layout.png) 0 -76px no-repeat transparent;
+}
+
+.settings-form-wrapper.sf_label {
+    position: relative;
+}
+
+#sf_label_preview {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 30px;
+    background-color: #dfdfdf;
+}
+
+#sf_label_preview, #sf_label_preview span, #sf_label_preview i {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-2x {
+font-size: 24px !important;
+}
+.fa-3x {
+font-size: 36px !important;
+}
+
+.sf_width_panel_1,
+.sf_width_panel_2,
+.sf_width_panel_3,
+.sf_width_panel_4 {
+    float: left;
+    clear: both;
+}
+
+[class*=sf_width_panel] input,
+#sf_font_size,
+#sf_padding,
+#sf_lh {
+    width: 48px;
+}
+[class*=sf_bg_color_panel] {
+    float: right;
+    margin: 19px 0 0 0;
+    position: relative;
+    left: -470px;
+}
+
+[class*=sf_color_panel]  {
+    float: right;
+    margin: 19px 0 0 0;
+    position: relative;
+    left: -450px;
+}
+
+[class*=sf_color_panel] input,
+[class*=sf_bg_color_panel] input{
+    width: 100px;
+}
+
+.settings-form-wrapper {
+    overflow: hidden;
+}
+
+.settings-form-row.sf_transparent_panel {
+   clear: both;
+}
+
+
+.sf_tab_logo_holder img{
+  height: 70px;
+}
+
+.loc_popup {
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    /*position: fixed;*/
+    width: 300px;
+    height: 452px;
+    margin: 0;
+    padding: 12px 30px 30px;
+    background: #ebebeb;
+    z-index: 1000000;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition:opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    transition-delay: .1s;
+    -webkit-transition-delay: .1s;
+}
+
+
+
+#fade-overlay {
+    position: fixed;
+    top: -100%;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#fade-overlay {
+    -webkit-transform: translateY(25%);
+    -moz-transform: translateY(25%);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%);
+}
+
+.popup, #fade-overlay {
+    -webkit-transition: visibility 0s 0.3s, opacity 0.3s linear, -webkit-transform 0s 0.3s;
+    -moz-transition: visibility 0s 0.3s, opacity 0.3s linear, -moz-transform 0s 0.3s;
+    -ms-transition: visibility 0s 0.3s, opacity 0.3s linear, -ms-transform 0s 0.3s;
+    transition: visibility 0s 0.3s, opacity 0.3s linear, transform 0s 0.3s;
+    -webkit-backface-visibility: hidden;
+}
+
+#fade-overlay.loading {
+    /*z-index: 1000000;*/
+}
+
+.popup_visible .view-visible .popup,
+.popup_visible #fade-overlay,
+#fade-overlay.loading {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease;
+    -moz-transition: opacity 0.3s linear, -moz-transform 0.3s ease;
+    -ms-transition: opacity 0.3s linear, -ms-transform 0.3s ease;
+    transition: opacity 0.3s linear, transform 0.3s ease;
+    -webkit-backface-visibility: hidden
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.svg-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+svg path,
+svg rect{
+    fill: white;
+}
+
+
+
+
+
+
